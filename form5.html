@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Inner Page - Day Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="forms\form.css" rel="stylesheet">
+  
+
+  <script>
+      function validateForm() {
+          let valid = true;
+
+          // Full Name Validation
+          const fullName = document.getElementById('full_name');
+          const namePattern = /^[A-Za-z\s]+$/;
+          if (!namePattern.test(fullName.value)) {
+              fullName.classList.add('is-invalid');
+              fullName.classList.remove('is-valid');
+              valid = false;
+          } else {
+              fullName.classList.add('is-valid');
+              fullName.classList.remove('is-invalid');
+          }
+
+          // Email Validation
+          const email = document.getElementById('email');
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email.value)) {
+              email.classList.add('is-invalid');
+              email.classList.remove('is-valid');
+              valid = false;
+          } else {
+              email.classList.add('is-valid');
+              email.classList.remove('is-invalid');
+          }
+
+          // WhatsApp Number Validation
+          const whatsapp = document.getElementById('whatsapp');
+          const whatsappPattern = /^\d{10}$/;
+          if (!whatsappPattern.test(whatsapp.value)) {
+              whatsapp.classList.add('is-invalid');
+              whatsapp.classList.remove('is-valid');
+              valid = false;
+          } else {
+              whatsapp.classList.add('is-valid');
+              whatsapp.classList.remove('is-invalid');
+          }
+
+          // Checkbox Validation
+          const checkBox = document.getElementById('invalidCheck');
+          if (!checkBox.checked) {
+              checkBox.classList.add('is-invalid');
+              checkBox.classList.remove('is-valid');
+              valid = false;
+          } else {
+              checkBox.classList.add('is-valid');
+              checkBox.classList.remove('is-invalid');
+          }
+
+          return valid;
+      }
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">earn@gmail.com</a>
+        <i class="bi bi-phone-fill phone-icon"></i> 8089708692
+      </div>
+      <div class="social-links d-none d-md-block">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">EARN</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <div id="login-container">
+    <form action="form.php" method="POST" class="requires-validation" onsubmit="return validateForm()" novalidate>
+      <div class="form-body">
+        <div class="row">
+          <div class="form-holder">
+            <div class="form-content">
+              <div class="form-items">
+                <h3>Vedio Editing</h3>
+                <p>Xylem</p>
+
+                <div class="col-md-12">
+                  <input class="form-control" id="full_name" type="text" name="full_name" placeholder="Full Name" required>
+                  <div class="valid-feedback">Full Name field is valid!</div>
+                  <div class="invalid-feedback">Full Name should contain only alphabets and cannot be blank!</div>
+                </div>
+
+                <div class="col-md-12">
+                  <input class="form-control" id="email" type="email" name="email" placeholder="E-mail Address" required>
+                  <div class="valid-feedback">Email field is valid!</div>
+                  <div class="invalid-feedback">Please enter a valid email address!</div>
+                </div>
+
+                <div class="col-md-12">
+                  <input class="form-control" id="whatsapp" type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+                  <div class="valid-feedback">WhatsApp number field is valid!</div>
+                  <div class="invalid-feedback">WhatsApp number should be exactly 10 digits and cannot be blank!</div>
+                </div>
+
+                <div class="col-md-12">
+                  <input class="form-control" id="Job" type="text" name="job" value="Vedio Editing" placeholder="job" hidden>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label">I confirm that all data are correct</label>
+                  <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                </div>
+
+                <div class="form-button mt-3">
+                  <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
